@@ -1,0 +1,17 @@
+.app-cursor {
+    z-index: 100;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: 2px dotted rgba(62, 245, 245);
+    // outline: 2px dotted rgba(62, 245, 245);
+    // border-style: double;
+    // outline-offset: 10px;
+    pointer-events: none;
+    overflow: hidden;
+    padding: 10px;
+    transform: translate3d(0, 0, 0);
+    position: fixed;
+    // box-shadow: inset 0 0 0 1px $orange;
+    background: linear-gradient( to center, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
+}

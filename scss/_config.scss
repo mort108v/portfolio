@@ -1,0 +1,151 @@
+$grey: #16162A;
+$grey-medium: #3F3F50;
+$grey-light: #A5A5AC;
+$grey-pastel: #E3E3E5;
+$green: #5BE080;
+$green-light: #B9F8B9;
+$green-pastel: #DFFCDF;
+$blue-cyber: rgba(62, 245, 245);
+$blue-dark: #16152b;
+$blue-dusk: #1d1b38;
+$blue: #3E14D6;
+$blue-light: #6259FA;
+$blue-pastel: #CACEFC;
+$orange: #F48D69;
+$orange-light: #FFB591;
+$orange-pastel: #F8DDCE;
+$primaryColor: $blue-dark;
+$secondaryColor: $blue-cyber;
+$headerColor: $green;
+$borderLineColor: $orange-light;
+// $background-color: #16152b;
+// $text-color: #16152b;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    scrollbar-width: normal;
+    scrollbar-color: $blue $blue-dark;
+}
+
+html::-webkit-scrollbar {
+    width: 1.2vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: $blue-dark;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(57, 3, 88, 0.274);
+}
+
+html::-webkit-scrollbar-track {
+    background-color: $orange;
+}
+
+html::-webkit-scrollbar-track:hover {
+    background-color: rgba(147, 19, 221, 0.185);
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return $primaryColor;
+    }
+    @else {
+        @return $secondaryColor;
+    }
+}
+
+@function set-burger-color($color) {
+    @if (lightness($color) > 40%) {
+        @return $primaryColor;
+    }
+    @else {
+        @return $secondaryColor;
+    }
+}
+
+// @function set-bgr-color($color) {
+//     @if ($color==$primaryColor) {
+//         @return $primaryColor;
+//     }
+//     @else {
+//         @return $secondaryColor;
+//     }
+// }
+@function set-borderLine-color($color) {
+    @if (lightness($color) > 30%) {
+        @return $borderLineColor;
+    }
+    @else {
+        @return $primaryColor;
+    }
+}
+
+@function set-header-color($color) {
+    @if (lightness($color) > 40%) {
+        @return $secondaryColor;
+    }
+    @else {
+        @return $orange;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+ :export {
+    primaryColor: $primaryColor;
+}
+
+ :export {
+    secondaryColor: $secondaryColor;
+}
+
+:export {
+    headerColor: $headerColor;
+}
+
+@mixin longshadow($color) {
+    text-shadow: makelongshadow($color);
+}
+
+@function makelongshadow($color) {
+    $val: 0px 0px $color;
+    @for $i from 1 through 200 {
+        $val: #{$val},
+        #{$i}px #{$i}px #{$color};
+    }
+    @return $val;
+}
+
+// h1 {
+//     @include longshadow(darken($color, 5% ));
+// }
