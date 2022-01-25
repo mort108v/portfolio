@@ -1,7 +1,7 @@
  @import 'config';
  // @import 'overview';
  @import 'fonts';
- // @import 'responsive';
+ @import 'responsive';
  @import 'buttons';
  @import 'menu';
  @import 'cursor';
@@ -79,13 +79,15 @@
      z-index: 2;
      height: auto;
      padding: 10px;
-     top: .5rem;
+     //  top: .5rem;
      align-content: center;
      vertical-align: center;
      margin-left: .5rem;
      margin-right: .5rem;
+     margin-top: .5rem;
+     margin-bottom: .5rem;
      display: grid;
-     grid-template-columns: 2fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
      column-gap: 10px;
      color: var(--text-color);
      background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
@@ -94,9 +96,9 @@
      @include transition-ease;
      & .social-icons {
          z-index: 2;
-         text-align: right;
+         text-align: left;
          a {
-             padding: 0 0.4rem 0 0.4rem;
+             padding: 0 0.25rem 0 0.25rem;
              @include transition-ease;
              &:hover {
                  color: $orange;
@@ -118,35 +120,36 @@
      }
  }
  
- #main {
-     height: 100%;
-     position: sticky;
-     text-align: center;
-     align-content: center;
-     margin: 0 auto;
-     margin-top: 1.5vh;
-     margin-bottom: 1.5vh;
-     padding: 10px;
-     border: 2px solid set-text-color($primaryColor);
-     border-radius: 10px;
-     @include transition-ease;
-     background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
- }
- 
+ //  #main {
+ //      height: 100%;
+ //      position: sticky;
+ //      text-align: center;
+ //      align-content: center;
+ //      margin: 0 auto;
+ //      //  margin-top: 1.5vh;
+ //      //  margin-bottom: 1.5vh;
+ //      padding-top: 10px;
+ //      border: 2px solid set-text-color($primaryColor);
+ //      border-radius: 10px;
+ //      @include transition-ease;
+ //      background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
+ //  }
  #Splash {
      position: relative;
      z-index: 2;
-     height: 40vh;
+     height: 30vh;
      //  width: 95vw;
-     padding: 10px;
-     top: 1rem;
+     padding-top: 20px;
+     //  top: 1rem;
      align-content: center;
      vertical-align: center;
      margin-left: .5rem;
      margin-right: .5rem;
-     display: grid;
-     grid-template-columns: 1fr;
-     column-gap: 10px;
+     margin-top: .5rem;
+     margin-bottom: .5rem;
+     //  display: grid;
+     //  grid-template-columns: 1fr;
+     //  column-gap: 10px;
      color: var(--text-color);
      background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
      //  border: 2px solid set-text-color($primaryColor);
@@ -155,9 +158,9 @@
  }
  
  #pixelEffect {
-     width: 650px;
-     height: 250px;
-     border: 1px solid set-text-color($primaryColor);
+     width: 99.8%;
+     height: 99.5%;
+     //  border: 1px solid set-text-color($primaryColor);
      border-radius: 10px;
      top: 50%;
      left: 50%;

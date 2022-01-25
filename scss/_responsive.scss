@@ -1,45 +1,18 @@
 @include media-md {
-    .App-header {
-        width: 95vw;
-    }
-    #main {
-        width: 95vw;
-    }
-    .overview {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto;
-        // &.wrapper {}
+    #Splash {
+        height: 35vh;
     }
 }
 
 @include media-lg {
-    .App-header {
-        width: 95vw;
-        & h1,
-        h2,
-        h3 {
-            font-size: 1.3rem;
-        }
-    }
-    .overview {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    #Splash {
+        height: 40vh;
     }
 }
 
 @include media-xl {
-    .App-header {
-        width: 95vw;
-        & h1,
-        h2,
-        h3 {
-            font-size: 1.5rem;
-        }
-    }
-    .overview {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+    #Splash {
+        height: 45vh;
     }
 }
 
