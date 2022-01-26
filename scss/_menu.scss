@@ -48,6 +48,10 @@
         &.open {
             transform: rotate(720deg);
             background: transparent;
+            &:hover {
+                background: transparent;
+                border: 2em transparent;
+            }
             &::before {
                 transform: rotate(45deg) translate(5px, 8px);
             }
@@ -127,7 +131,7 @@
     }
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 6 {
     .menu-nav__item:nth-child(#{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
     }

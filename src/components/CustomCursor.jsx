@@ -1,7 +1,5 @@
 import React from "react";
-import renderContent from "react";
 import { isMobile } from "react-device-detect";
-import { render } from "react-dom";
 
 const CustomCursor = () => {
   const cursorRef = React.useRef(null);
@@ -13,7 +11,6 @@ const CustomCursor = () => {
       cursorRef.current.style.transform = `translate3d(${mouseX}px,${mouseY}px, 0)`;
     });
   });
-
   if (isMobile) {
     return <div className="cursor" ref={cursorRef} />;
   }
