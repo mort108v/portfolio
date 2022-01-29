@@ -1,4 +1,5 @@
 "use strict"
+import { isMobile } from "react-device-detect";
 
 const canvas = document.getElementById("canvas1")
 const ctx = canvas.getContext('2d')
@@ -80,7 +81,10 @@ class Particle {
 function init() {
 
     particlesArray = []
-    let numberOfParticles = (canvas.height * canvas.width) / 9000
+    let numberOfParticles = (canvas.height * canvas.width) / 8000
+    if (!isMobile) {
+        numberOfParticles = (canvas.height * canvas.width) / 15000;
+    }
     for (let i = 0; i < numberOfParticles * 2; i++) {
         let size = (Math.random() * 5) + 1
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2)
@@ -110,8 +114,8 @@ function connect() {
     for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
             let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y))
-            if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                opacityValue = 1 - (distance / 15000)
+            if (distance < (canvas.width / 3) * (canvas.height / 7)) {
+                opacityValue = 1 - (distance / 30000)
                 ctx.strokeStyle = 'rgba(62, 245, 245,' + opacityValue + ')'
                 ctx.lineWidth = 1
                 ctx.beginPath()
