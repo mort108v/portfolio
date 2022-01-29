@@ -79,16 +79,14 @@
      z-index: 2;
      height: auto;
      padding: 10px;
-     //  top: .5rem;
-     align-content: center;
      vertical-align: center;
      margin-left: .5rem;
      margin-right: .5rem;
      margin-top: .5rem;
      margin-bottom: .5rem;
      display: grid;
-     grid-template-columns: 1fr 1fr 1fr 1fr;
-     column-gap: 10px;
+     grid-template-columns: 1fr 1fr;
+     column-gap: 5px;
      color: var(--text-color);
      background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
      //  border: 2px solid set-text-color($primaryColor);
@@ -106,17 +104,12 @@
          }
      }
      & .App-header__btn {
-         align-content: right;
-         text-align: right;
          color: var(--text-color);
          background: transparent;
          @include transition-ease;
          &:hover {
              color: $orange;
          }
-     }
-     & .Time {
-         text-align: right;
      }
  }
  
@@ -137,7 +130,7 @@
  #Splash {
      position: relative;
      z-index: 2;
-     height: 30vh;
+     height: 20vh;
      //  width: 95vw;
      padding-top: 20px;
      //  top: 1rem;

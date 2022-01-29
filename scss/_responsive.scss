@@ -1,3 +1,9 @@
+@include media-mobile {
+    #Splash {
+        height: 25vh;
+    }
+}
+
 @include media-md {
     #Splash {
         height: 35vh;

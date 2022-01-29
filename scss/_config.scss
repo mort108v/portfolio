@@ -103,6 +103,12 @@ html::-webkit-scrollbar-track:hover {
     }
 }
 
+@mixin media-mobile {
+    @media screen and (max-width: 350px) {
+        @content;
+    }
+}
+
 @mixin media-md {
     @media screen and (min-width: 700px) {
         @content;
