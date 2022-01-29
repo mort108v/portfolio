@@ -3,13 +3,12 @@ import Nav from "./Nav";
 import { isMobile } from "react-device-detect";
 
 const Burger = () => {
-  const [open, setOpen] = useState();
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     if (isMobile) {
       setOpen(false);
     }
-    setOpen(true);
   }, []);
 
   return (
