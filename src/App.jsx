@@ -1,9 +1,9 @@
 import "../scss/main.scss";
-import ThemeChange from "./components/ThemeChange";
+// import ThemeChange from "./components/ThemeChange";
 import Burger from "./components/Burger";
 import Social from "./components/Social";
 import CustomCursor from "./components/CustomCursor";
-import AnimateIntro from "./components/AnimateIntro";
+// import AnimateIntro from "./components/AnimateIntro";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <header className="App-header draw">
         {/* <AnimateIntro /> */}
         <Social />
-        <ThemeChange />
+        {/* <ThemeChange /> */}
         <Burger />
       </header>
       <section id="Splash" className="draw">

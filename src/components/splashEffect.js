@@ -14,8 +14,6 @@ image1.addEventListener('load', function() {
 
     splashCanvas.width = splashWidth;
     splashCanvas.height = splashHeight;
-    // splashCanvas.width = 1300;
-    // splashCanvas.height = 400;
 
     splashCTX.drawImage(image1, 0, 0, splashCanvas.width, splashCanvas.height);
     const pixels = splashCTX.getImageData(0, 0, splashCanvas.width, splashCanvas.height);

@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "./Nav";
+import { isMobile } from "react-device-detect";
+
 const Burger = () => {
-  const [open, setOpen] = useState(false);
-  // const allBurgerDivs = document.querySelectorAll(".menu-btn__burger");
-  // allBurgerDivs.addEventListener("mouseover", ()=> {
-  //   allBurgerDivs.className.toggle(".orange");
-  //   console.log("Green");
-  // });
+  const [open, setOpen] = useState();
+
+  useEffect(() => {
+    if (isMobile) {
+      setOpen(false);
+    }
+    setOpen(true);
+  }, []);
+
   return (
     // Open Burger and animate
     <>
