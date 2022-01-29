@@ -81,16 +81,20 @@ class Particle {
 function init() {
 
     particlesArray = []
-    let numberOfParticles = (canvas.height * canvas.width) / 8000
+    let numberOfParticles = (canvas.height * canvas.width) / 9000
     if (!isMobile) {
-        numberOfParticles = (canvas.height * canvas.width) / 15000;
+        numberOfParticles = (canvas.height * canvas.width) / 12000;
     }
     for (let i = 0; i < numberOfParticles * 2; i++) {
         let size = (Math.random() * 5) + 1
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2)
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2)
-        let directionX = (Math.random() * 3) - 1.5
-        let directionY = (Math.random() * 3) - 1.5
+        let directionX = (Math.random() * 2) - 1.5
+        let directionY = (Math.random() * 2) - 1.5
+        if (!isMobile) {
+            directionX = (Math.random() * 3) - 1.5
+            directionY = (Math.random() * 3) - 1.5
+        }
         let color = '#9198e5'
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color))
