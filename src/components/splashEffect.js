@@ -51,7 +51,7 @@ image1.addEventListener('load', function() {
             (red * red) * 0.299 +
             (green * green) * 0.587 +
             (blue * blue) * 0.114
-        ) / 100;
+        ) / 10;
     }
 
 
@@ -98,7 +98,13 @@ image1.addEventListener('load', function() {
         }
         requestAnimationFrame(animate);
     }
-    animate();
+    setTimeout(animate, 3000)
+        // animate();
+        // document.addEventListener('mousemove',
+        //     function() {
+
+    //         animate();
+    //     })
 
     // Greyscale
 
