@@ -99,12 +99,7 @@ image1.addEventListener('load', function() {
         requestAnimationFrame(animate);
     }
     setTimeout(animate, 3000)
-        // animate();
-        // document.addEventListener('mousemove',
-        //     function() {
 
-    //         animate();
-    //     })
 
     // Greyscale
 

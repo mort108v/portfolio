@@ -1,6 +1,3 @@
-// import { useState, useEffect } from "react";
-// import Nav from "./Nav";
-
 const Burger = ({ burgerOpen }) => {
   return (
     // Open Burger and animate
@@ -16,7 +13,6 @@ const Burger = ({ burgerOpen }) => {
       {/* </div> */}
       {/* {burgerOpen ?  : null} */}
     </>
-    // And then open Nav
   );
 };
 export default Burger;

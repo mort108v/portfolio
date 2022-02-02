@@ -16,11 +16,14 @@ let mouse = {
     radius: (canvas.height / 99) * (canvas.width / 99)
 }
 
-window.addEventListener('mousemove',
-    function(event) {
-        mouse.x = event.x
-        mouse.y = event.y
-    })
+// Only respond to mouse if !mobile
+if (!isMobile) {
+    window.addEventListener('mousemove',
+        function(event) {
+            mouse.x = event.x
+            mouse.y = event.y
+        })
+}
 
 // create particle
 class Particle {
