@@ -1,30 +1,22 @@
-import { useState, useEffect } from "react";
-import Nav from "./Nav";
-import { isMobile } from "react-device-detect";
+// import { useState, useEffect } from "react";
+// import Nav from "./Nav";
 
-const Burger = () => {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (!isMobile) {
-      setOpen(true);
-    }
-  }, []);
-
+const Burger = ({ burgerOpen }) => {
   return (
     // Open Burger and animate
-    <div className="burger">
-      <div className="menu-btn" onClick={() => setOpen(!open)}>
-        {open ? (
+    <>
+      {/* <div className="burger" onClick={() => setBurgerOpen(!burgerOpen)}> */}
+      <div className="menu-btn">
+        {burgerOpen ? (
           <div className="menu-btn__burger open"></div>
         ) : (
           <div className="menu-btn__burger"></div>
         )}
       </div>
-      {open ? <Nav open={open} /> : null}
-    </div>
+      {/* </div> */}
+      {/* {burgerOpen ?  : null} */}
+    </>
     // And then open Nav
   );
 };
-
 export default Burger;

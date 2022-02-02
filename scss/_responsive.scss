@@ -2,11 +2,22 @@
     #Splash {
         height: 25vh;
     }
+    // .app-cursor {
+    //     border: hidden;
+    //     background: hidden;
+    // }
+    #pixelEffect {
+        width: 99%;
+        height: 99%;
+    }
 }
 
 @include media-md {
     #Splash {
         height: 35vh;
+    }
+    .burger {
+        display: none;
     }
 }
 

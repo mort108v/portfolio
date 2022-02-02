@@ -81,7 +81,7 @@ class Particle {
 function init() {
 
     particlesArray = []
-    let numberOfParticles = (canvas.height * canvas.width) / 9000
+    let numberOfParticles = (canvas.height * canvas.width) / 15000
     if (!isMobile) {
         numberOfParticles = (canvas.height * canvas.width) / 12000;
     }

@@ -24,7 +24,7 @@ image1.addEventListener('load', function() {
     let numberOfParticles = 700;
 
     if (!isMobile) {
-        numberOfParticles = 1500;
+        numberOfParticles = 2500;
     }
 
     let mappedImage = [];

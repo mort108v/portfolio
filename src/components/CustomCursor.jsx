@@ -11,10 +11,10 @@ const CustomCursor = () => {
       cursorRef.current.style.transform = `translate3d(${mouseX}px,${mouseY}px, 0)`;
     });
   });
-  if (isMobile) {
-    return <div className="cursor" ref={cursorRef} />;
+  if (!isMobile) {
+    return <div className="app-cursor" ref={cursorRef} />;
   }
-  return <div className="app-cursor" ref={cursorRef} />;
+  return <div className="app-cursor hide" ref={cursorRef} />;
 };
 
 export default CustomCursor;
