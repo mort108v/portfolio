@@ -6,6 +6,7 @@ import { isMobile } from "react-device-detect";
 import Social from "./components/Social";
 import CustomCursor from "./components/CustomCursor";
 import Nav from "./components/Nav";
+import DeskNav from "./components/DeskNav";
 // import AnimateIntro from "./components/AnimateIntro";
 
 const App = () => {
@@ -28,11 +29,18 @@ const App = () => {
         <div className="burger" onClick={() => setBurgerOpen(!burgerOpen)}>
           <Burger burgerOpen={burgerOpen} />
         </div>
-        <Nav burgerOpen={burgerOpen} />
+        <>
+          {isMobile ? (
+            <Nav burgerOpen={burgerOpen} />
+          ) : (
+            <DeskNav burgerOpen={burgerOpen} />
+          )}
+        </>
       </header>
       <section id="Splash" className="draw">
         <canvas id="pixelEffect"></canvas>
       </section>
+      <section id="About" className="draw"></section>
     </div>
   );
 };

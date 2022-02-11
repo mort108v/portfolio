@@ -64,7 +64,7 @@ image1.addEventListener('load', function() {
             this.size = Math.random() * 1.5 + 1;
         }
         update() {
-            this.y += this.velocity + 1;
+            this.y += this.velocity + .5;
             if (this.y >= splashCanvas.height) {
                 this.y = 0;
                 this.x = Math.random() * splashCanvas.width;
@@ -84,7 +84,8 @@ image1.addEventListener('load', function() {
             particleArray.push(new Particle);
         }
     }
-    initParticles();
+    setTimeout(initParticles, 300)
+        // initParticles();
 
     function animate() {
         splashCTX.drawImage(image1, 0, 0, splashCanvas.width, splashCanvas.height);

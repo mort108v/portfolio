@@ -8,7 +8,8 @@
  #root {
      $background-color: #16152b;
      $text-color: #CACEFC;
-     height: 100%;
+     //  width: 100vw;
+     //  height: 100vh;
  }
  
  body {
@@ -79,10 +80,7 @@
      height: auto;
      padding: 10px;
      vertical-align: center;
-     margin-left: .5rem;
-     margin-right: .5rem;
-     margin-top: .5rem;
-     margin-bottom: .5rem;
+     margin: .5rem;
      display: grid;
      grid-template-columns: 1fr 1fr;
      column-gap: 5px;

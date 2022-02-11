@@ -129,6 +129,58 @@
     }
 }
 
+.desk-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    opacity: 0.98;
+    visibility: hidden;
+    &.open {
+        visibility: visible;
+    }
+    & .desk-menu-nav {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: right;
+        text-align: end;
+        // height: 7.7vh;
+        overflow: hidden;
+        background: var(--background-color);
+        list-style-type: none;
+        // padding-right: 1rem;
+        transform: translateY(-100%);
+        @include transition-ease;
+        &.open {
+            transform: translateY(0);
+        }
+        &__item {
+            transform: translateX(100vw);
+            @include transition-ease;
+            &.open {
+                transform: translateX(0);
+            }
+            &.active>a {
+                color: $secondaryColor;
+            }
+        }
+        &__link {
+            // text-align: center;
+            // display: inline-block;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding: .2rem 0;
+            font-weight: 300;
+            @include transition-ease;
+            &:hover {
+                color: $secondaryColor;
+            }
+        }
+    }
+}
+
 @for $i from 1 through 5 {
     .menu-nav__item:nth-child(#{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
