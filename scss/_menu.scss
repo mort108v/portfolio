@@ -43,8 +43,11 @@
             @include transition-ease;
         }
         &.open {
+            right: -0.2rem;
+            margin-top: -0.1rem;
             transform: rotate(720deg);
             background: transparent;
+            border: 2em transparent;
             &:hover {
                 background: transparent;
                 border: 2em transparent;
@@ -65,7 +68,7 @@
         }
     }
     &:hover>* {
-        background: $orange;
+        background: transparent;
     }
     &:hover>*::before {
         background: $orange;
@@ -81,7 +84,7 @@
 
 .nav {
     position: fixed;
-    top: 0;
+    top: 5vh;
     left: 0;
     width: 100vw;
     opacity: 0.98;
@@ -105,6 +108,7 @@
             transform: translateY(0);
         }
         &__item {
+            padding-bottom: 1vh;
             transform: translateX(100vw);
             @include transition-ease;
             &.open {
