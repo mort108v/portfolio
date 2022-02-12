@@ -1,10 +1,10 @@
  @import 'config';
+ @import 'draw';
  @import 'fonts';
  @import 'responsive';
  //  @import 'buttons';
  @import 'menu';
  @import 'cursor';
- @import 'draw';
  #root {
      $background-color: #16152b;
      $text-color: #CACEFC;
@@ -18,7 +18,7 @@
      font-family: $shapiro-feather;
      font-weight: 400;
      line-height: 1;
-     cursor: none;
+     //  cursor: none;
  }
  
  //    :hover .app-cursor {

@@ -9,7 +9,7 @@ const DeskNav = ({ burgerOpen }) => {
     <nav className="desk-nav open">
       <ul className="desk-menu-nav open">
         <li className={className}>
-          <a href="#!" className="desk-menu-nav__link signin-btn">
+          <a href="#!" className="desk-menu-nav__link signin-btn ">
             {"Sign In!"}
           </a>
         </li>
