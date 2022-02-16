@@ -7,6 +7,7 @@ import Social from "./components/Social";
 import CustomCursor from "./components/CustomCursor";
 import Nav from "./components/Nav";
 import DeskNav from "./components/DeskNav";
+import About from "./components/About";
 // import AnimateIntro from "./components/AnimateIntro";
 
 const App = () => {
@@ -40,7 +41,9 @@ const App = () => {
       <section id="Splash" className="draw">
         <canvas id="pixelEffect"></canvas>
       </section>
-      <section id="About" className="draw"></section>
+      <section id="About">
+        <About />
+      </section>
     </div>
   );
 };

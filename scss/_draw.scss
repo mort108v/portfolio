@@ -1,7 +1,9 @@
 .App-header::before,
 .App-header::after,
 #Splash::before,
-#Splash::after {
+#Splash::after,
+.About::before,
+.About::after {
     box-sizing: inherit;
     content: '';
     position: absolute;
