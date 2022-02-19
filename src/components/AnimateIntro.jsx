@@ -2,49 +2,58 @@ import { gsap } from "gsap";
 
 const AnimateIntro = () => {
   let typedText = document.querySelector(".animatedTitle");
-  const headerAnimation = document.querySelector(".headerText");
+  console.log(typedText);
+  let headerAnimation = document.querySelector(".headerText");
+  // let logoName = document.querySelector(".LOGONAME");
 
   let typed;
-
   let nthletter = 0;
-  let typingSpeed = 50;
+  let typingSpeed = 80;
 
   const siteAnimateTimeline = gsap.timeline({ defaults: { duration: 1 } });
 
   siteAnimateTimeline
-
     // .from('#header', { y: '-150%', ease: 'bounce' }, .5)
-
     // Fade in header
-    .from(headerAnimation, { opacity: 0, stagger: 0.5 })
+    // .from(headerAnimation, { opacity: 0, stagger: 0.5 })
     // Typewrite future text
     .from(writeTitle(), { opacity: 0, stagger: 1.5 }, 1)
     // Animate future text into LOGO - scale it down and place it
     .fromTo(
       headerAnimation,
       { x: "0", y: "0", ease: "power2.in", scale: 1 },
-      { x: "-34.5vw", y: "-6.2vw", ease: "power2.in", scale: 0.323 }
-    )
-    //
-    .fromTo(
-      ".animatedTitle",
-      { opacity: 1, rotationX: "0", innerHTML: 0 },
-      {
-        rotationX: "360",
-        innerHTML: "6p4c design",
-        flipHeaderText,
-        opacity: 0.65,
-      }
-    )
-    // Unhide Links and animate in place
-    .from(".links", { opacity: 0, stagger: 1 });
+      { x: "-25vw", y: "-5vh", ease: "power2.in", scale: 0.5 }
+    );
+  //
+  // .fromTo(
+  //   ".animatedTitle",
+  //   { opacity: 1, rotationX: "0", innerHTML: 0 },
+  //   {
+  //     rotationX: "720",
+  //     innerHTML: "BLOCKDESIGN",
+  //     // flipHeaderText,
+  //     // opacity: 0.65,
+  //   }
+  // );
+  // Unhide Links and animate in place
+  // .from(".links", { opacity: 0, stagger: 1 });
 
-  function flipHeaderText() {
-    console.log("flip me");
+  // function flipHeaderText() {
+  //   console.log("flip me");
 
-    typedText.className.add("fill");
-    headerAnimation.className.add("newStroke");
-  }
+  //   typedText.classList.add("fill");
+  //   // headerAnimation.classList.add("newStroke");
+  //   // headerAnimation += " newStroke";
+  //   // animatedTitle.addEventListener("animationend", () => {
+  //   //   headerText.classList.add("hide");
+  //   // });
+  // }
+  // setTimeout(showLogo(), 5000);
+
+  // function showLogo() {
+  //   typedText.classList.add("hide");
+  //   logoName.classList.remove("hide");
+  // }
 
   function writeTitle() {
     // Fetch txt from HTML
@@ -52,7 +61,10 @@ const AnimateIntro = () => {
     // Clear fetched text
     typedText.textContent = "";
     // Start Loop function
-    typewriterLoop(typed);
+    setTimeout(function () {
+      typewriterLoop(typed);
+    }, 1200);
+    // typewriterLoop(typed);
   }
 
   function typewriterLoop() {
@@ -66,13 +78,6 @@ const AnimateIntro = () => {
       setTimeout(typewriterLoop, typingSpeed);
     }
   }
-  return (
-    <div className="headerText">
-      <div className="logo">
-        <h1 className="animatedTitle">DESIGNING THE FUTURE</h1>
-      </div>
-    </div>
-  );
 };
 
 export default AnimateIntro;

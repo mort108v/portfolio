@@ -3,6 +3,9 @@
     justify-content: right;
     vertical-align: center;
     margin-top: .4rem;
+    &.deskview {
+        position: absolute;
+    }
 }
 
 .menu-btn {
@@ -134,22 +137,23 @@
 }
 
 .desk-nav {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 80vw;
+    // position: relative;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
     opacity: 0.98;
     visibility: hidden;
     &.open {
         visibility: visible;
     }
     & .desk-menu-nav {
+        width: 100%;
         display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        // grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-content: right;
-        text-align: end;
+        text-align: right;
         overflow: hidden;
         background: var(--background-color);
         list-style-type: none;
@@ -160,6 +164,8 @@
             transform: translateY(0);
         }
         &__item {
+            position: relative;
+            text-align: right;
             transform: translateX(100vw);
             @include transition-ease;
             &.open {
@@ -170,8 +176,6 @@
             }
         }
         &__link {
-            // text-align: center;
-            // display: inline-block;
             font-size: 1.1rem;
             text-transform: uppercase;
             padding: .2rem 0;

@@ -8,6 +8,11 @@ const DeskNav = ({ burgerOpen }) => {
   return (
     <nav className="desk-nav open">
       <ul className="desk-menu-nav open">
+        <li className="LOGONAME">
+          <a href="#!" className="LOGO">
+            {"BLOCKDESIGN"}
+          </a>
+        </li>
         <li className={className}>
           <a href="#!" className="desk-menu-nav__link about-btn">
             {"About"}
@@ -15,7 +20,7 @@ const DeskNav = ({ burgerOpen }) => {
         </li>
         <li className={className}>
           <a href="#!" className="desk-menu-nav__link background-btn">
-            {"Background"}
+            {"BGR"}
           </a>
         </li>
         <li className={className}>
@@ -24,8 +29,8 @@ const DeskNav = ({ burgerOpen }) => {
           </a>
         </li>
         <li className={className}>
-          <a href="#!" className="desk-menu-nav__link goals-btn">
-            {"Goals"}
+          <a href="#!" className="desk-menu-nav__link contact-btn">
+            {"Contact"}
           </a>
         </li>
         <li className={className}>

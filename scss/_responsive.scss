@@ -6,14 +6,24 @@
         width: 99%;
         height: 99%;
     }
+    .App-header {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
 }
 
 @include media-md {
+    .social {
+        display: none;
+    }
     #Splash {
         height: 35vh;
     }
     .burger {
         display: none;
+    }
+    .App-header {
+        display: block;
     }
 }
 

@@ -8,14 +8,16 @@ import CustomCursor from "./components/CustomCursor";
 import Nav from "./components/Nav";
 import DeskNav from "./components/DeskNav";
 import About from "./components/About";
-// import AnimateIntro from "./components/AnimateIntro";
 
+import IntroText from "./components/IntroText";
 const App = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   useEffect(() => {
     if (!isMobile) {
       setBurgerOpen(true);
+      // const burger = document.querySelector(".burger");
+      // burger.className.add("deskview");
     }
   }, []);
 
@@ -24,8 +26,8 @@ const App = () => {
       <CustomCursor />
       <canvas id="canvas1"></canvas>
       <header className="App-header draw">
-        {/* <AnimateIntro /> */}
-        <Social />
+        <>{isMobile ? <Social /> : <Social className="hide" />}</>
+
         {/* <ThemeChange /> */}
         <div className="burger" onClick={() => setBurgerOpen(!burgerOpen)}>
           <Burger burgerOpen={burgerOpen} />
@@ -38,10 +40,12 @@ const App = () => {
           )}
         </>
       </header>
+
       <section id="Splash" className="draw">
         <canvas id="pixelEffect"></canvas>
+        <IntroText className="intro" />
       </section>
-      <section id="About">
+      <section id="About" className="about hide">
         <About />
       </section>
     </div>
