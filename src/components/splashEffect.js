@@ -23,8 +23,8 @@ image1.addEventListener('load', function() {
     let particleArray = [];
     let numberOfParticles = 700;
 
-    if (!isMobile) {
-        numberOfParticles = 2500;
+    if (isMobile) {
+        numberOfParticles = 1000;
     }
 
     let mappedImage = [];
@@ -33,9 +33,9 @@ image1.addEventListener('load', function() {
     for (let y = 0; y < splashCanvas.height; y++) {
         let row = [];
         for (let x = 0; x < splashCanvas.width; x++) {
-            const red = pixels.data[(y * 4 * pixels.width) + (x * 4)];
+            const red = pixels.data[(y * 3 * pixels.width) + (x * 4)];
             const green = pixels.data[(y * 4 * pixels.width) + (x * 4 + 1)];
-            const blue = pixels.data[(y * 4 * pixels.width) + (x * 4 + 2)];
+            const blue = pixels.data[(y * 2 * pixels.width) + (x * 4 + 2)];
             const brightness = calculateRelativeBrightness(red, green, blue);
 
             const cell = [
@@ -51,7 +51,7 @@ image1.addEventListener('load', function() {
             (red * red) * 0.299 +
             (green * green) * 0.587 +
             (blue * blue) * 0.114
-        ) / 10;
+        ) / 100;
     }
 
 

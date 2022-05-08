@@ -171,9 +171,9 @@
             &.open {
                 transform: translateX(0);
             }
-            &.active>a {
-                color: $orange;
-            }
+            // &.active>a {
+            //     color: $orange;
+            // }
         }
         &__link {
             font-size: 1.1rem;
@@ -183,6 +183,9 @@
             user-select: none;
             @include transition-ease;
             &:hover {
+                color: $orange;
+            }
+            &.active {
                 color: $orange;
             }
         }

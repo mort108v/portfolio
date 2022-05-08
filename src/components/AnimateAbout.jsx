@@ -1,14 +1,14 @@
 import { gsap } from "gsap";
 
-const AnimateIntro = () => {
-  let typedText = document.querySelector(".animatedTitle");
+const AnimateAbout = () => {
+  let typedText = document.querySelector(".animatedAbout");
   console.log(typedText);
-  let headerAnimation = document.querySelector(".headerText");
+  let aboutAnimation = document.querySelector(".aboutText");
   // let logoName = document.querySelector(".LOGONAME");
 
   let typed;
   let nthletter = 0;
-  let typingSpeed = 80;
+  let typingSpeed = 65;
 
   const siteAnimateTimeline = gsap.timeline({ defaults: { duration: 1 } });
 
@@ -20,9 +20,9 @@ const AnimateIntro = () => {
     .from(writeTitle(), { opacity: 0, stagger: 1.5 }, 1)
     // Animate future text into LOGO - scale it down and place it
     .fromTo(
-      headerAnimation,
-      { x: "0", y: "0", ease: "power2.in", scale: 1 },
-      { x: "-25vw", y: "-5vh", ease: "power2.in", scale: 0.5 }
+      aboutAnimation,
+      { x: "70vw", y: "30vh", ease: "power2.in", scale: 1 },
+      { x: "3vw", y: "10vh", ease: "power2.in", scale: 0.8 }
     );
   //
   // .fromTo(
@@ -80,4 +80,4 @@ const AnimateIntro = () => {
   }
 };
 
-export default AnimateIntro;
+export default AnimateAbout;

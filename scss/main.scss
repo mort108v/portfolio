@@ -22,6 +22,13 @@
      line-height: 1;
  }
  
+ .inactive {
+     opacity: 50%;
+     &:hover {
+         opacity: 1;
+     }
+ }
+ 
  //    :hover .app-cursor {
  //        border: 2px dotted $orange;
  //    }
@@ -182,4 +189,11 @@
      &:hover {
          color: $orange;
      }
+ }
+ 
+ .aboutText {
+     width: 35vw;
+     text-align: center;
+     line-height: 2rem;
+     justify-content: space-between;
  }
