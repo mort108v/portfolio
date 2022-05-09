@@ -9,11 +9,10 @@ import Nav from "./components/Nav";
 // import DeskNav from "./components/DeskNav";
 import AboutText from "./components/AboutText";
 import IntroText from "./components/IntroText";
-// import AnimateAbout from "./components/AnimateAbout";
+// import Animate3D from "./components/Animate3D";
 
 const App = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  // const [navLinkClicked, setNavLinkClicked] = useState({
   const [navLinkActive, setNavLinkActive] = useState({
     activeLink: null,
     navLinkIDs: [
@@ -39,14 +38,6 @@ const App = () => {
       setBurgerOpen(true);
     }
   }, []);
-
-  // useEffect(() => {
-  //   if (navLinkActive.activeLink === "ABOUT") {
-  //     setIsAbout(true);
-  //     console.log(isAbout);
-  //   }
-  //   setIsAbout(false);
-  // }, []);
 
   const handleNavClick = (index, e) => {
     console.log(index, e);
@@ -113,12 +104,7 @@ const App = () => {
       <section id="Splash" className="draw">
         <canvas id="pixelEffect"></canvas>
         <IntroText className="intro" />
-
-        {/* <AboutText /> */}
-        <>
-          {" "}
-          <AboutText isAbout={isAbout} />
-        </>
+        <AboutText isAbout={isAbout} />
       </section>
     </div>
   );

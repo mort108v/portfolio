@@ -8,7 +8,7 @@ const AnimateAbout = () => {
 
   let typed;
   let nthletter = 0;
-  let typingSpeed = 65;
+  let typingSpeed = 75;
 
   const siteAnimateTimeline = gsap.timeline({ defaults: { duration: 1 } });
 
@@ -21,8 +21,8 @@ const AnimateAbout = () => {
     // Animate future text into LOGO - scale it down and place it
     .fromTo(
       aboutAnimation,
-      { x: "70vw", y: "30vh", ease: "power2.in", scale: 1 },
-      { x: "3vw", y: "10vh", ease: "power2.in", scale: 0.8 }
+      { x: "3vw", y: "2vh", ease: "power2.in", scale: 0.6 },
+      { x: "3vw", y: "13vh", ease: "power2.in", scale: 0.9 }
     );
   //
   // .fromTo(

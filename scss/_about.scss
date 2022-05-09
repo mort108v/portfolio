@@ -1,17 +1,17 @@
 @import 'fonts';
-.About {
-    position: relative;
-    z-index: 2;
-    // height: auto;
-    padding: 10px;
-    vertical-align: center;
-    margin: .5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
-    color: var(--text-color);
-    background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
-    //  border: 2px solid set-text-color($primaryColor);
-    border-radius: 10px;
-    @include transition-ease;
-}
+// .About {
+//     position: relative;
+//     z-index: 2;
+//     // height: auto;
+//     padding: 10px;
+//     vertical-align: center;
+//     margin: .5rem;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     column-gap: 5px;
+//     color: var(--text-color);
+//     background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
+//     //  border: 2px solid set-text-color($primaryColor);
+//     border-radius: 10px;
+//     @include transition-ease;
+// }

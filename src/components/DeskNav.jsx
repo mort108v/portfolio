@@ -29,63 +29,23 @@ const DeskNav = ({ burgerOpen }) => {
 
   return (
     <nav className="desk-nav open">
-      <ul className="desk-menu-nav open">
-        <li className={className}>
+    <ul className="desk-menu-nav open">
+      {navLinkActive.navLinkIDs.map((e, index) => (
+        <li className={className} key={e + index}>
           <a
             href="#!"
-            id="LOGO"
-            className="desk-menu-nav__link active logo-btn"
+            key={e.id}
+            className={handleNavStyles(index, e.id)}
+            onClick={() => {
+              handleNavClick(index, e.id);
+            }}
           >
-            {"BLOCKDESIGN"}
+            {e.id}
           </a>
         </li>
-        <li className={className}>
-          <a
-            href="#!"
-            id="ABOUT"
-            className="desk-menu-nav__link inactive about-btn"
-          >
-            {"About"}
-          </a>
-        </li>
-        <li className={className}>
-          <a
-            href="#!"
-            id="BGR"
-            className="desk-menu-nav__link inactive background-btn"
-          >
-            {"BGR"}
-          </a>
-        </li>
-        <li className={className}>
-          <a
-            href="#!"
-            id="WORK"
-            className="desk-menu-nav__link inactive work-btn"
-          >
-            {"Work"}
-          </a>
-        </li>
-        <li className={className}>
-          <a
-            href="#!"
-            id="CONTACT"
-            className="desk-menu-nav__link inactive contact-btn"
-          >
-            {"Contact"}
-          </a>
-        </li>
-        <li className={className}>
-          <a
-            href="#!"
-            id="BLOCK"
-            className="desk-menu-nav__link inactive blockchain-btn"
-          >
-            {"Blockchain"}
-          </a>
-        </li>
-      </ul>
-    </nav>
+      ))}
+    </ul>
+  </nav>
   );
 };
 

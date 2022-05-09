@@ -1,199 +1,219 @@
- @import 'config';
- @import 'draw';
- @import 'fonts';
- @import 'responsive';
- //  @import 'buttons';
- @import 'menu';
- @import 'cursor';
- @import 'about';
- #root {
-     $background-color: #16152b;
-     $text-color: #CACEFC;
-     cursor: none;
-     width: 100%;
-     height: 100%;
- }
- 
- body {
-     background: var(--background-color);
-     color: var(--text-color);
-     font-family: $shapiro-regular;
-     font-weight: 400;
-     line-height: 1;
- }
- 
- .inactive {
-     opacity: 50%;
-     &:hover {
-         opacity: 1;
+     @import 'config';
+     @import 'draw';
+     @import 'fonts';
+     @import 'responsive';
+     //  @import 'buttons';
+     @import 'menu';
+     @import 'cursor';
+     @import 'about';
+     #root {
+         $background-color: #16152b;
+         $text-color: #CACEFC;
+         cursor: none;
+         width: 100%;
+         height: 100%;
      }
- }
- 
- //    :hover .app-cursor {
- //        border: 2px dotted $orange;
- //    }
- #canvas1 {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: radial-gradient(#4b0cb1, rgb(28, 4, 68));
- }
- 
- //  ul li {
- //      list-style-type: none;
- //      text-align: left;
- //  }
- h1,
- h2,
- h3 {
-     font-size: 1.4rem;
-     font-weight: 400;
-     color: set-header-color($headerColor);
- }
- 
- a,
- p {
-     color: set-text-color($primaryColor);
-     text-decoration: none;
- }
- 
- button {
-     align-content: center;
-     text-align: center;
-     margin: 0 auto;
- }
- 
- .LOGONAME {
-     // Something with transparent instead of hide!!
-     text-align: left;
-     font-size: 1.2rem;
-     font-weight: 400;
-     @include transition-ease;
- }
- 
- h1.animatedTitle {
-     z-index: 3000;
-     position: absolute;
-     top: 11vh;
-     left: 5vw;
-     padding: 4px;
-     font-size: 4rem;
-     -webkit-text-stroke-width: 1px;
-     -webkit-text-stroke-color: set-text-color($primaryColor);
-     //  -webkit-text-fill-color: transparent;
-     -webkit-text-fill-color: radial-gradient(rgb(75, 12, 177), rgb(28, 4, 68));
-     text-align: center;
-     font-family: 'shapiro97air';
-     z-index: 3000;
-     &.fill {
-         //  content: 'BLOCKDESIGN';
-         //  position: relative;
-         -webkit-text-stroke-color: transparent;
-         -webkit-text-fill-color: set-text-color($primaryColor);
+     
+     body {
+         background: var(--background-color);
+         color: var(--text-color);
+         font-family: $shapiro-regular;
+         font-weight: 400;
+         line-height: 1;
      }
- }
- 
- .App-header {
-     position: relative;
-     z-index: 2;
-     height: auto;
-     padding: 10px;
-     vertical-align: center;
-     margin: .5rem;
-     column-gap: 5px;
-     color: var(--text-color);
-     background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
-     //  border: 2px solid set-text-color($primaryColor);
-     border-radius: 10px;
-     @include transition-ease;
-     & .social-icons {
-         z-index: 2;
+     
+     .inactive {
+         opacity: 50%;
+         &:hover {
+             opacity: 1;
+         }
+     }
+     
+     //    :hover .app-cursor {
+     //        border: 2px dotted $orange;
+     //    }
+     #canvas1 {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: radial-gradient(#4b0cb1, rgb(28, 4, 68));
+     }
+     
+     //  ul li {
+     //      list-style-type: none;
+     //      text-align: left;
+     //  }
+     h1,
+     h2,
+     h3 {
+         font-size: 1.4rem;
+         font-weight: 400;
+         color: set-header-color($headerColor);
+     }
+     
+     a,
+     p {
+         color: set-text-color($primaryColor);
+         text-decoration: none;
+     }
+     
+     button {
+         align-content: center;
+         text-align: center;
+         margin: 0 auto;
+     }
+     
+     .LOGONAME {
+         // Something with transparent instead of hide!!
          text-align: left;
-         a {
-             padding: 0 0.25rem 0 0.25rem;
+         font-size: 1.2rem;
+         font-weight: 400;
+         @include transition-ease;
+     }
+     
+     h1.animatedTitle {
+         z-index: 3000;
+         position: absolute;
+         top: 11vh;
+         left: 5vw;
+         padding: 4px;
+         font-size: 4rem;
+         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-color: set-text-color($primaryColor);
+         //  -webkit-text-fill-color: transparent;
+         -webkit-text-fill-color: radial-gradient(rgb(75, 12, 177), rgb(28, 4, 68));
+         text-align: center;
+         font-family: 'shapiro97air';
+         z-index: 3000;
+         &.fill {
+             //  content: 'BLOCKDESIGN';
+             //  position: relative;
+             -webkit-text-stroke-color: transparent;
+             -webkit-text-fill-color: set-text-color($primaryColor);
+         }
+     }
+     
+     .App-header {
+         position: relative;
+         z-index: 2;
+         height: auto;
+         padding: 10px;
+         vertical-align: center;
+         margin: .5rem;
+         column-gap: 5px;
+         color: var(--text-color);
+         background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
+         //  border: 2px solid set-text-color($primaryColor);
+         border-radius: 10px;
+         @include transition-ease;
+         & .social-icons {
+             z-index: 2;
+             text-align: left;
+             a {
+                 padding: 0 0.25rem 0 0.25rem;
+                 @include transition-ease;
+                 &:hover {
+                     color: $orange;
+                 }
+             }
+         }
+         & .App-header__btn {
+             color: var(--text-color);
+             background: transparent;
              @include transition-ease;
              &:hover {
                  color: $orange;
              }
          }
      }
-     & .App-header__btn {
+     
+     //  #main {
+     //      height: 100%;
+     //      position: sticky;
+     //      text-align: center;
+     //      align-content: center;
+     //      margin: 0 auto;
+     //      //  margin-top: 1.5vh;
+     //      //  margin-bottom: 1.5vh;
+     //      padding-top: 10px;
+     //      border: 2px solid set-text-color($primaryColor);
+     //      border-radius: 10px;
+     //      @include transition-ease;
+     //      background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
+     //  }
+     #Splash {
+         position: relative;
+         z-index: 2;
+         //  height: 20vh;
+         //  width: 95vw;
+         padding-top: 20px;
+         //  top: 1rem;
+         align-content: center;
+         vertical-align: center;
+         margin-left: .5rem;
+         margin-right: .5rem;
+         margin-top: .5rem;
+         margin-bottom: .5rem;
+         //  display: grid;
+         //  grid-template-columns: 1fr;
+         //  column-gap: 10px;
          color: var(--text-color);
-         background: transparent;
+         background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
+         //  border: 2px solid set-text-color($primaryColor);
+         border-radius: 10px;
+         @include transition-ease;
+     }
+     
+     #pixelEffect {
+         width: 99.8%;
+         height: 99.5%;
+         //  border: 1px solid set-text-color($primaryColor);
+         border-radius: 10px;
+         top: 50%;
+         left: 50%;
+         position: absolute;
+         transform: translate(-50%, -50%);
+     }
+     
+     .hide {
+         display: none;
+         @include transition-ease;
+     }
+     
+     i {
+         align-self: right;
+         text-align: right;
          @include transition-ease;
          &:hover {
              color: $orange;
          }
      }
- }
- 
- //  #main {
- //      height: 100%;
- //      position: sticky;
- //      text-align: center;
- //      align-content: center;
- //      margin: 0 auto;
- //      //  margin-top: 1.5vh;
- //      //  margin-bottom: 1.5vh;
- //      padding-top: 10px;
- //      border: 2px solid set-text-color($primaryColor);
- //      border-radius: 10px;
- //      @include transition-ease;
- //      background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
- //  }
- #Splash {
-     position: relative;
-     z-index: 2;
-     //  height: 20vh;
-     //  width: 95vw;
-     padding-top: 20px;
-     //  top: 1rem;
-     align-content: center;
-     vertical-align: center;
-     margin-left: .5rem;
-     margin-right: .5rem;
-     margin-top: .5rem;
-     margin-bottom: .5rem;
-     //  display: grid;
-     //  grid-template-columns: 1fr;
-     //  column-gap: 10px;
-     color: var(--text-color);
-     background: linear-gradient( to right, rgba($headerColor, 0.3), rgba($primaryColor, 1), rgba($headerColor, 0.3));
-     //  border: 2px solid set-text-color($primaryColor);
-     border-radius: 10px;
-     @include transition-ease;
- }
- 
- #pixelEffect {
-     width: 99.8%;
-     height: 99.5%;
-     //  border: 1px solid set-text-color($primaryColor);
-     border-radius: 10px;
-     top: 50%;
-     left: 50%;
-     position: absolute;
-     transform: translate(-50%, -50%);
- }
- 
- .hide {
-     display: none;
-     @include transition-ease;
- }
- 
- i {
-     align-self: right;
-     text-align: right;
-     @include transition-ease;
-     &:hover {
-         color: $orange;
+     
+     #About {
+         width: 95vw;
+         height: auto;
+         display: flex;
+         justify-content: space-between;
      }
- }
- 
- .aboutText {
-     width: 35vw;
-     text-align: center;
-     line-height: 2rem;
-     justify-content: space-between;
- }
+     
+     .aboutText {
+         width: 30vw;
+         text-align: center;
+         line-height: 2rem;
+         justify-content: left
+     }
+     
+     #AnimateAbout {
+         z-index: 5000;
+         margin-top: 35px;
+     }
+     
+     #background3d {
+         position: relative;
+         z-index: 5000;
+         width: 300px;
+         height: 300px;
+         justify-content: right;
+     }
